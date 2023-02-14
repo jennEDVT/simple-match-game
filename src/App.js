@@ -1,23 +1,16 @@
+import React, {useState} from "react";
 import logo from './logo.svg';
+import { Gameboard } from "./components/Gameboard";
 import './App.css';
 
+const imgArray = ["https://assets.codepen.io/282737/cat2.jpg", "https://assets.codepen.io/282737/cat3.jpg"]
+
 function App() {
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Gameboard imgArray={imgArray} rowLength={2} />
     </div>
   );
 }
